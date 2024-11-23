@@ -14,12 +14,13 @@ function App() {
     tg.close();
   };
 
-  console.log(tg.initData)
+  let text = JSON.stringify(tg.initDataUnsafe);
+  // console.log(tg.initData)
 
   return (
     <div className="App">
       {/* <div>{`username: ${tg.initDataUnsafe?.user?.username}`}</div> */}
-      <div>{tg.initDataUnsafe}</div>
+      <div>{`${text}`}</div>
       <button onClick={onClose}>Закрыть</button>
     </div>
   );
